@@ -1,0 +1,23 @@
+<div>
+    <h3>Test Model</h3>
+    <select class="form-control" [(ngModel)]="TestModel" (change)="sendTestModel($event)">
+            <option value="Aptitude">Aptitude</option>
+            <option value="Technical">Technical</option>
+        </select>
+    </div>
+    <br/>
+    <ul>
+        <li *ngFor="let data of dat">
+            <div>
+                <label>{{data.Sno}}.{{data.Question}}</label><br/>
+                <label>Answer : {{data.Answer}}</label><br/>
+                <label>Option1 : {{data.Option1}}</label><br/>
+                <label>Option2 : {{data.Option2}}</label><br/>
+                <label>Option3 : {{data.Option3}}</label><br/>
+                <label>Option4 : {{data.Option4}}</label><br/>
+                <label>Mark : {{data.Mark}}</label>
+            </div>
+        </li>
+    </ul>
+ 
+    

@@ -1,0 +1,68 @@
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off"  style="max-width: 450px; margin-left:3%;" >
+    <div>
+        <div class="form-group">
+            <label>Question No</label>
+            <input name="Sno" #Sno="ngModel" [(ngModel)]="services.formData.Sno" class="form-control" [attr.disabled]="true">
+            <!-- <div class="validation-error" *ngIf="SNo.invalid && SNo.touched">This field is Mandatory</div> -->
+        </div>
+        <div class="form-group">
+            <label>Test Model</label>
+            <input name="Testmodel" #Testmodel="ngModel" [(ngModel)]="services.formData.Testmodel" class="form-control"
+                required>
+            <div class="validation-error" *ngIf="Testmodel.invalid && Testmodel.touched">*</div>
+        </div>
+        <div class="form-group">
+            <label>Question</label>
+            <textarea name="Question" style="max-height: 70px;" type="text" #Question="ngModel"
+                [(ngModel)]="services.formData.Question" class="form-control" required>
+     </textarea>
+            <div class="validation-error" *ngIf="Question.invalid && Question.touched">*</div>
+        </div>
+        <div class="form-group">
+            <label>Answer</label>
+            <input name="Answer" #Answer="ngModel" [(ngModel)]="services.formData.Answer" class="form-control"
+                required>
+            <div class="validation-error" *ngIf="Answer.invalid && Answer.touched">*</div>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Option1</label>
+            <input name="Option1" #Option1="ngModel" [(ngModel)]="services.formData.Option1" class="form-control"
+                required>
+            <div class="validation-error" *ngIf="Option1.invalid && Option1.touched">*</div>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Option2</label>
+            <input name="Option2" #Option2="ngModel" [(ngModel)]="services.formData.Option2" class="form-control"
+                required>
+            <div class="validation-error" *ngIf="Option2.invalid && Option2.touched">*</div>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Option3</label>
+            <input name="Option3" #Option3="ngModel" [(ngModel)]="services.formData.Option3" class="form-control"
+                required>
+            <div class="validation-error" *ngIf="Option3.invalid && Option3.touched">*</div>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Option4</label>
+            <input name="Option4" #Option4="ngModel" [(ngModel)]="services.formData.Option4" class="form-control"
+                required>
+            <div class="validation-error" *ngIf="Option4.invalid && Option4.touched">*</div>
+        </div>
+        <div class="form-group">
+            <label>Mark</label>
+            <input name="Mark" #Mark="ngModel" [(ngModel)]="services.formData.Mark" class="form-control" required>
+            <div class="validation-error" *ngIf="Mark.invalid && Mark.touched">*</div>
+        </div>
+    </div>
+    <div class="form-group" style="display:flex;flex-direction:row;">
+        <br><br>
+        <div>
+            <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block" id="submit">Submit</button>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div>
+            <button type="reset" (onClick)="this.services.refreshList()" class="btn btn-lg btn-block"
+                id="reset">Reset</button>
+        </div>
+    </div>
+</form>

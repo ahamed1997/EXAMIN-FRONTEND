@@ -1,0 +1,67 @@
+<div class="container">
+<div *ngFor="let user of userdata">    
+<div *ngIf="user.Teststatus === 'Upcoming'">
+    <div class="container">            
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>TestModel</th>
+                    <th>TestDate</th>
+                    <th>TestStatus</th>
+                    <th>Payment Mode</th>
+                    <th>Amount Paid</th>
+                    <th>Payed Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> {{user.Username}}</td>
+                    <td> {{user.Testmodel}}</td>
+                    <td> {{user.Testdate}}</td>
+                    <td> <label class="text-success">{{user.Teststatus}}</label></td>
+                    <td> <label class="text-warning">{{user.Paymentmode}}</label></td>
+                    <td><label>Rs.1009.00</label></td>
+                    <td> <label class="text-warning">{{user.Payeddate}}</label></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div *ngIf="user.Teststatus!='Upcoming' && user.Teststatus!='Expired' && user.Teststatus!='Completed'&& user.Teststatus!='Cancelled'">
+        <div class="text-center">        
+        <img src="/assets/images/noresultsfound.png">                                         
+            <label>No History Found!</label>
+        </div>        
+    </div>
+</div> 
+<div *ngIf = "user.Teststatus==='Cancelled'">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>TestModel</th>
+                <th>TestDate</th>
+                <th>TestStatus</th>
+                <th>Payment Mode</th>
+                <th>Creditted Amount</th>
+                <th>Cancelled Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> {{user.Username}}</td>
+                <td> {{user.Testmodel}}</td>
+                <td> {{user.Testdate}}</td>
+                <td> <label class="text-success">{{user.Teststatus}}</label></td>
+                <td> <label class="text-warning">{{user.Paymentmode}}</label></td>
+                <td><label>Rs.709.00</label></td>
+                <td> <label class="text-warning">{{user.Cancelleddate}}</label></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>

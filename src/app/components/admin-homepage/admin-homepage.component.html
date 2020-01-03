@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="fixed-nav-bar">
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <a class="navbar-brand" >
+          <img src="../assets/images/e.jpg" style="border-radius: 200%; width: 60px; height: 50px; margin-top:-3px" alt="Examen">
+        </a>
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="home">Home 
+            <span class="sr-only">  
+            </span>
+            </a>
+          </li> 
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Exam Question Settings  
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" routerLink="ques">Question List</a>
+                <!-- <a class="dropdown-item" routerLink="quest">Add </a> -->
+                <a class="dropdown-item" routerLink="edit">Question Settings</a>
+                </div>
+          </li>
+          <!-- <li class="nav-item">
+            <button class="btn btn-outline-primary" (click)="LogOut()">Log Out</button>
+          </li> -->
+      </ul>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-danger" id="logout" (click)="LogOut()">Log Out</button>
+    </div>
+      </nav>
+      <div>
+        <router-outlet></router-outlet>
+      </div> 
+      
+ 
+ 

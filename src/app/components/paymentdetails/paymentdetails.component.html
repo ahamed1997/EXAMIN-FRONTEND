@@ -1,0 +1,47 @@
+<!-- <div *ngFor="let admins of admin">
+    Name {{admins.Name}}
+    <br/>
+    Email Id: {{admins.Email}}
+    <br/>
+    Phone No: {{admins.Phone}}
+    <br/>
+    Test Model: {{admins.Testmodel}}
+    <br/>
+    Date: {{admins.Date}}
+    <br/>
+    <br/>
+</div> -->
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row bootstrap snippets"> 
+    <div class="col-md-9 col-sm-7"> 
+        <h2 class="text-center">Paid Users</h2> 
+    </div>  
+</div>
+
+<div class="member-entry" *ngFor="let admins of admin"> 
+    <div class="member-details"> 
+       
+        <div class="row info-list">   
+            <div class="col-sm-6"> 
+                <i class="fa fa-envelope"></i> 
+                <a>{{admins.Username}}</a> 
+            </div> 
+            <div class="clear"></div>  
+            <div class="col-sm-6"> 
+                <i class="fa fa-phone"></i> 
+                <a>{{admins.Testid}}</a> 
+            </div>
+            <div class="col-sm-6"> 
+                    <i class="fa fa-pencil"></i> 
+                    <a>{{admins.Testmodel}}</a> 
+            </div>
+            <div class="col-sm-6"> 
+                    <i class="fa fa-calendar-o"></i> 
+                    <a>{{admins.Date}}</a> 
+            </div> 
+        </div> 
+    </div> 
+</div>
+

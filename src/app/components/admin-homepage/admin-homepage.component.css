@@ -1,0 +1,51 @@
+.background{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    margin-top: 0px;
+    background-repeat: no-repeat;
+     background-image: url( 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT4J462OeM4pz71hAh-Q-00WtVMNsrfi6tLyX9Qobel4w78Xhy3' );
+}
+.backgroundBottom{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    float: right;
+    left: 70.7%;
+    top:39%;
+    transform: rotate(180deg); 
+    margin-bottom:0;
+    padding: 0;
+     background-repeat: no-repeat;
+     background-image: url( 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT4J462OeM4pz71hAh-Q-00WtVMNsrfi6tLyX9Qobel4w78Xhy3' );
+}
+.homePageButtons{
+    background:transparent;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+ }
+.userdetails,.examreg,.exam,.results{
+    color:rgb(255, 254, 254) !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background:rgb(43, 43, 43);
+    padding: 20px;
+    padding-top:20px;
+    /* border: 2px solid darkgray !important; */
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    border-radius:20%;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    }
+    .userdetails:hover,.examreg:hover,.exam:hover,.results:hover {
+        color: black !important;
+        background: lightskyblue;
+        border-color: darkgray !important;
+        transition: all 0.4s ease 0s;
+        }
+.nav-item{
+    cursor: pointer;
+}

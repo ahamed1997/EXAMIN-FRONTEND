@@ -1,0 +1,36 @@
+<div style="padding: 20px;">
+    <div style="text-align: center;">
+            <div class="card card-3">
+                    <h1>Successfully Completed Test..!!</h1>
+                    <br />
+
+                    <div *ngIf="scores<4">
+                            <label style="color: red;">Test Score : {{scores}}</label>
+                            <br />
+                            <h3><b>You Failed..!!</b></h3><br />
+                            <img src="/assets/images/sad.jpg">
+                    </div>
+                    <div *ngIf="scores>3">
+                            <div *ngIf="scores<9">
+                                    <label style="color: black;">Test Score : {{scores}}</label>
+                                    <br />
+                                    <h3><b>Fair..!!</b></h3><br />
+                                    <img src="/assets/images/avg.png">
+                            </div>
+                    </div>
+                    <div *ngIf="scores>8">
+                            <label style="color: green;">Test Score : {{scores}}</label>
+                            <br />
+                            <h3><b>Great.!!</b></h3><br />
+                            <img src="/assets/images/great2.jpg">
+                    </div>
+                    <br />
+                    <br />
+                    <button class="btn btn-primay" (click)="Back()"> Finish Test</button>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+            </div>
+    </div>
+</div>

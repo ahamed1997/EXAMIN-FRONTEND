@@ -1,0 +1,682 @@
+<script>
+	function myFunction() {
+	  var x = document.getElementById("myVideo").autoplay;
+	  document.getElementById("demo").innerHTML = x;
+	}
+</script>
+
+<div>
+	<nav class="navbar navbar-default navbar-expand-lg navbar-light" >
+		<div class="navbar-header d-flex col">
+			<a class="navbar-brand" style="font-size: 300%;">Exa<b>min</b></a>  		
+			<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+				<span class="navbar-toggler-icon"></span>
+				<span class="icon-bar">
+					
+				</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+			<ul class="nav navbar-nav">
+				<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">About</a></li>			
+				<li class="nav-item dropdown">
+					<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Services <b class="caret"></b></a>
+					<ul class="dropdown-menu">					
+						<li><a href="#" class="dropdown-item">Web Design</a></li>
+						<li><a href="#" class="dropdown-item">Web Development</a></li>
+						<li><a href="#" class="dropdown-item">Graphic Design</a></li>
+						<li><a href="#" class="dropdown-item">Digital Marketing</a></li>
+					</ul>
+				</li>
+				
+			</ul>
+			 <form class="navbar-form form-inline">
+				<div class="input-group search-box">								
+					<input type="text" id="search" class="form-control" placeholder="Search here...">
+					<span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+				</div>
+			</form> 
+			<ul class="nav navbar-nav navbar-right ml-auto">			
+				<!-- <li class="nav-item">
+					<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#"> Admin Login</a>
+					<ul class="dropdown-menu form-wrapper">					
+						<li>
+							 <form action="/examples/actions/confirmation.php" method="post"> 
+								<p class="hint-text">Sign in with your social media account</p>
+								<div class="form-group social-btn clearfix">
+									<a href="#" class="btn btn-primary pull-left"><i class="fa fa-facebook"></i> Facebook</a>
+									<a href="#" class="btn btn-info pull-right"><i class="fa fa-twitter"></i> Twitter</a>
+								</div>
+								<div class="or-seperator"><b>or</b></div>
+								<div class>
+									<input type="text" class="form-control" [(ngModel)]="user.Username" placeholder="Username"  required="required">
+								</div>
+								<div>
+									<input type="password" class="form-control" [(ngModel)]="user.Password" placeholder="Password"  required="required">
+								</div>
+								<input type="submit" class="btn btn-primary btn-block" (click)="AdminLogIn()" value="Login">
+								
+								{{message}}
+							 </form>
+						</li>
+					</ul>
+				</li>				 -->
+						
+					<li class="nav-item">
+						<a  data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1" (click)="Userclick()">Admin LogIn/User LogIn </a>
+						<!-- <ul class="dropdown-menu form-wrapper">					
+							<li>
+							 <form action="/examples/actions/confirmation.php" method="post">
+									<p class="hint-text">Fill in this form to create your account!</p>
+									<div class="form-group">
+										<input type="text" class="form-control"  formControlName="name" placeholder="Name" required="required">
+									</div>
+									<div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+										<div *ngIf="angForm.controls['name'].errors.required">
+										  Name is required.
+										</div>
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Username" required="required">
+									</div>
+									<div class="form-group">
+										<input type="password" class="form-control" placeholder="Password" required="required">
+									</div>
+									<div class="form-group">
+										<input type="password" class="form-control" placeholder="Confirm Password" required="required">
+									</div>
+									<div class="form-group">
+										<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms &amp; Conditions</a></label>
+									</div>
+									<input type="submit" class="btn btn-primary btn-block" value="Sign up">
+								</form> 
+							</li>
+						</ul> -->
+						
+					</li>
+					<li>
+						&nbsp;&nbsp;&nbsp;
+
+					</li>
+				<li class="nav-item" >
+					<a  data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1" (click)="Sigupclick()">Sign up</a>
+					<!-- <ul class="dropdown-menu form-wrapper">					
+						<li>
+						 <form action="/examples/actions/confirmation.php" method="post">
+								<p class="hint-text">Fill in this form to create your account!</p>
+                                <div class="form-group">
+									<input type="text" class="form-control"  formControlName="name" placeholder="Name" required="required">
+                                </div>
+                                <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+                                    <div *ngIf="angForm.controls['name'].errors.required">
+                                      Name is required.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+									<input type="text" class="form-control" placeholder="Username" required="required">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" placeholder="Password" required="required">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" placeholder="Confirm Password" required="required">
+								</div>
+								<div class="form-group">
+									<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms &amp; Conditions</a></label>
+								</div>
+								<input type="submit" class="btn btn-primary btn-block" value="Sign up">
+							</form> 
+						</li>
+					</ul> -->
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+	</div>
+<!-- iweiwsi 
+
+<form [formGroup]="angForm" novalidate>
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input class="form-control" formControlName="name" type="text">
+                        </div>
+                        <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+                            <div *ngIf="angForm.controls['name'].errors.required">
+                              Name is required.
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label>Address:</label>
+                            <input class="form-control" formControlName="address" type="text">
+                        </div>
+                        <div *ngIf="angForm.controls['address'].invalid && (angForm.controls['address'].dirty || angForm.controls['address'].touched)" class="alert alert-danger">
+                            <div *ngIf="angForm.controls['address'].errors.required">
+                              email is required.
+                            </div>
+                        </div>
+                        <button type="submit"
+                            [disabled]="angForm.pristine || angForm.invalid" (click)="bjbj()" class="btn btn-success">
+                            Save
+                        </button>
+                  </form>
+              
+
+-->
+<!-- <video autoplay muted loop id="myVideo">
+	<source src="/assets/images/video.mp4" type="video/mp4">
+		
+  </video> -->
+	<div>
+		<div style="background-image: url(/assets/images/bg2.jpg);  height: 800px; background-repeat: no-repeat; background-size: cover;">
+		  <div style="padding: 80px; text-align: center; font-size: 150%;">
+		  
+			<div class="sk-cube-grid">
+				<div class="sk-cube sk-cube1"></div>
+				<div class="sk-cube sk-cube2"></div>
+				<div class="sk-cube sk-cube3"></div>
+				<div class="sk-cube sk-cube4"></div>
+				<div class="sk-cube sk-cube5"></div>
+				<div class="sk-cube sk-cube6"></div>
+				<div class="sk-cube sk-cube7"></div>
+				<div class="sk-cube sk-cube8"></div>
+				<div class="sk-cube sk-cube9"></div>
+			  </div>
+
+
+			  
+			  <div class="clock-container clock2" style="color: blanchedalmond;">
+				<div class="time">{{date}}</div>
+			  </div>
+				  
+				  <h1 class="ml5">
+					<span class="text-wrapper">
+					  <span class="line line1"></span>
+					  <span class="letters letters-left">Focus</span>
+					  <span class="letters ampersand">&amp;</span>
+					  <span class="letters letters-right">Win </span>
+					  <span class="line line2"></span>
+					</span>
+					</h1>
+				  <!-- <h1 class="ml6">
+					<span class="text-wrapper">
+					  <span class="letters">MAKE BELIEVE...</span>
+					</span>
+					</h1> -->
+			  <!-- <h1 class="ml4" style="color: lavenderblush;">
+				  <span class="letters letters-1">DREAM  BIG.</span>
+				  <span class="letters letters-2">THINK  DIFFERENT.</span>
+				  <span class="letters letters-3"> DO  GREAT.</span>
+				  </h1> -->
+			  
+		  </div>
+		  
+		  </div>
+		  
+		  <div style="text-align: center;">
+			  <h2 class="ml12">An Award Winning Online Assessment Platform</h2>
+			 
+			  <h1  style="font-size: 300%;">"Exa<b style="color:#33cabb;">min"</b></h1>  
+			  <h4>EXAMIN is a test to evaluate the reasoning Skills, Technical Skills and Aptitude Skills of a candidate who is seeking Job in top MNC’s. EXAMIN is also known as employability assessment test. The Skills of the candidates will be measured in a Statistical Approach if they attend the test. EXAMIN is conducted in order to assess the aptitude, reasoning and technical skills of students and freshers . EXAMIN is an assessment platform to provide the scores based on their skills for the students who takes up the test.  The objective of EXAMIN test is to grade the students based on their performance.</h4>
+		  <br/>
+		  </div>
+		  <hr>
+		  <br/>
+		  <div class="container">
+			  
+			  <div class="row">
+				<div class="col-md-3" >
+				<div class="thumbnail">
+				  <a>
+				  <img src="/assets/images/ai.jpg" alt="Lights" style="width:100%">
+				  <div class="caption" >
+					<p style="font-size: 17px;">AI Based Auto Proctoring.</p>
+				  </div>
+				  </a>
+				</div>
+				</div>
+				<div class="col-md-3">
+				<div class="thumbnail">
+				  <a href="/w3images/nature.jpg" target="_blank">
+				  <img src="/assets/images/search2.png" alt="Nature" style="width:100%">
+				  <div class="caption">
+					<p style="font-size: 17px;">Offline Assessment.</p>
+				  </div>
+				  </a>
+				</div>
+				</div>
+				<div class="col-md-3">
+				<div class="thumbnail">
+				  <a href="/w3images/fjords.jpg" target="_blank">
+				  <img src="/assets/images/manypeople.png" alt="Fjords" style="width:100%">
+				  <div class="caption">
+					<p style="font-size: 17px;">Adopted by Many Successfully.</p>
+				  </div>
+				  </a>
+				</div>
+				</div>
+				<div class="col-md-3">
+				  <div class="thumbnail">
+					<a href="/w3images/fjords.jpg" target="_blank">
+					<img src="/assets/images/analysis.png" alt="Fjords" style="width:100%">
+					<div class="caption">
+					  <p style="font-size: 16px;">Useful Analytics for Assessment.</p>
+					</div>
+					</a>
+				  </div>
+				  </div>
+				  
+			  </div>
+			  </div>
+			  
+			  <div style="background-color:#818a91; padding: 10px;">
+			  <h2 style="text-align: center;">Our Bleeding Edge Features</h2>
+			  <div class="container" style="background-color: #818a91;;">
+				<div >
+				  <div class="row">
+					<div class="col-md-4" style="background-color: #818a91;">
+					<div class="thumbnail" style="background-color:#24FF39">
+					  <a>
+					  <div class="caption" style="background-color:#24FF39" >
+						<h4>Well Engineered Assessment Module.</h4>
+						<br/>
+						<p>Conduct Aptitude Test, Personality Assessment,
+						  Recruitment Test, Test series for Competitive exams.
+						</p>
+					  </div>
+					  </a>
+					</div>
+					</div>
+					<div class="col-md-4" style="height: inherit;">
+					<div class="thumbnail"  style="background-color:#E820DE">
+					  <a>
+					  <div class="caption"  style="background-color:#E820DE">
+						<h4>Curring-edge Remote Proctoring Technology.</h4>
+						<br/>
+						<p>AI based Auto Proctoring with intelligent face 
+						Recognition to manage in camera onlime exams.
+						</p>
+					  </div>
+					  </a>
+					</div>
+					</div>
+					<div class="col-md-4" style="height: inherit;">
+					<div class="thumbnail" style="background-color: #FFBA24;">
+					  <a>
+					  <div class="caption"  style="background-color: #FFBA24;">
+						<h4>Systematic Anna Analytics for better Decision  Making</h4>
+						<br/>
+						<p>Analytics with Ranking, Percentile,Topic wise Analysis, Question wise Analysis, Group performance.
+						</p>
+					  </div>
+					  </a>
+					</div>
+					</div>
+					<div class="col-md-4" style="height: inherit;">
+					  <div class="thumbnail"style="background-color: #8B2CFF">
+						<a>
+						<div class="caption"  style="background-color: #8B2CFF">
+						  <h4>Question Bank Management</h4>
+						  <br/>
+						  <p>Supports Objective, Subjective, Multiple Choice, Fill in the blanks, Image, Audio, Video Based Questions.
+						  </p>
+						</div>
+						</a>
+					  </div>
+					  </div><div class="col-md-4" style="height: inherit;">
+						<div class="thumbnail" style="background-color: #FF7D54">
+						  <a>
+						  <div class="caption" style="background-color: #FF7D54;">
+							<h4>Different Marking Rules.</h4>
+							<br/>
+							<p>Online Exam with custom Pattern,negative & differential marking, Difficulty levels.
+							</p>
+						  </div>
+						  </a>
+						</div>
+						</div><div class="col-md-4" style="height: inherit;">
+						  <div class="thumbnail"style="background-color: #247FFF;" >
+							<a>
+							<div class="caption"style="background-color: #247FFF;" >
+							  <h4>Tried and Tested.</h4>
+							  <br/>
+							  <p>Successfully used by many Organizations, Universities and Training Institutions.
+							  </p>
+							</div>
+							</a>
+						  </div>
+						  </div>
+					</div>
+				</div>
+				</div>
+			  </div>
+			  <div>
+				<h1 style="text-align: center;">Our Testimonials</h1>
+				<h3 style="text-align: center;">More than 1000+ of Happy Clients</h3>
+				<br/>
+				<div class="container">
+				
+					<div class="row">
+						<div class="col-md-2">
+							<div>
+							<a href="/w3images/fjords.jpg" target="_blank">
+							  <img style="border: 1px solid #ddd; 
+							border-radius: 4px;  
+							padding: 5px;
+							width: 150px; " src="/assets/images/Infosys-1.jpg" class="img-fluid mx-auto d-block" alt="img1">
+							  
+							</a>
+							</div>
+							</div>
+						  
+							
+							<div class="col-md-2">
+								<div class="thumbnail">
+								<a href="/w3images/fjords.jpg" target="_blank">
+								  <img style="border: 1px solid #ddd; 
+							  border-radius: 4px;  
+							  padding: 5px;
+							  width: 150px; " src="/assets/images/zoho.png" class="img-fluid mx-auto d-block" alt="img9">
+								  
+								</a>
+								</div></div>
+							  
+							  <div class="col-md-2">
+								  <div class="thumbnail">
+								  <a href="/w3images/fjords.jpg" target="_blank">
+									<img style="border: 1px solid #ddd; 
+							border-radius: 4px;  
+							padding: 5px;
+							width: 150px; " src="/assets/images/oracle.png" class="img-fluid mx-auto d-block" alt="img8">
+									
+								  </a>
+								  </div>
+								</div>
+								<div class="col-md-2">
+									<div class="thumbnail">
+									<a href="/w3images/fjords.jpg" target="_blank">
+									  <img style="border: 1px solid #ddd; 
+							border-radius: 4px;  
+							padding: 5px;
+							width: 150px; " src="/assets/images/wipro.jpg" class="img-fluid mx-auto d-block" alt="img7">
+									  
+									</a>
+									</div>
+								  </div>
+								  <div class="col-md-2">
+									  <div class="thumbnail">
+									  <a href="/w3images/fjords.jpg" target="_blank">
+										<img style="border: 1px solid #ddd; 
+							border-radius: 4px;  
+							padding: 5px;
+							width: 150px; " src="/assets/images/cognizant-logo.png" class="img-fluid mx-auto d-block" alt="img6">
+										
+									  </a>
+									  </div>
+									</div>
+									<div class="col-md-2">
+										<div class="thumbnail">
+										<a href="/w3images/fjords.jpg" target="_blank">
+										  <img  style="border: 1px solid #ddd; 
+							border-radius: 4px;  
+							padding: 5px;
+							width: 150px; " src="/assets/images/hp-logo-vector-download.jpg" class="img-fluid mx-auto d-block" alt="img4">
+										  
+										</a>
+										</div>
+									  </div>
+									  
+						
+					  </div>  
+			  </div>
+		  <footer class="site-footer" >
+			  <div class="container">
+				<div class="row">
+				<div class="col-sm-12 col-md-6">
+				  <h6>About</h6>
+				  <p class="text-justify">Examin.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+				</div>
+			
+				<div class="col-xs-6 col-md-3">
+				  <h6>Categories</h6>
+				  <ul class="footer-links" style="font-size:12px;">
+				  <li><a >C</a></li>
+				  <li><a >UI Design</a></li>
+				  <li><a >PHP</a></li>
+				  <li><a >Java</a></li>
+				  <li><a >Android</a></li>
+				  <li><a >Templates</a></li>
+				  </ul>
+				</div>
+			
+				<div class="col-xs-6 col-md-3">
+				  <h6>Quick Links</h6>
+				  <ul class="footer-links" style="font-size:12px;">
+				  <li><a >About Us</a></li>
+				  <li><a >Contact Us</a></li>
+				  <li><a >Contribute</a></li>
+				  <li><a>Privacy Policy</a></li>
+				  <li><a>Sitemap</a></li>
+				  </ul>
+				</div>
+				</div>
+				<hr>
+			  </div>
+			  <div class="container">
+				<div class="row">
+				<div class="col-md-8 col-sm-6 col-xs-12">
+				  <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+				 <a href="#">Examin</a>.
+				  </p>
+				</div>
+			
+				<div class="col-md-4 col-sm-6 col-xs-12">
+				  <ul class="social-icons">
+				  <li><a class="facebook" ><i class="fa fa-facebook"></i></a></li>
+				  <li><a class="twitter" ><i class="fa fa-twitter"></i></a></li>
+				  <li><a class="dribbble" ><i class="fa fa-dribbble"></i></a></li>
+				  <li><a class="linkedin" ><i class="fa fa-linkedin"></i></a></li>   
+				  </ul>
+				</div>
+				</div>
+			  </div>
+			</footer>
+	  </div>
+	
+
+	
+	
+          <!-- <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
+
+            
+            <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
+          
+           
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link waves-light" mdbWavesEffect>Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
+                </li>
+          
+            
+                <li class="nav-item dropdown" dropdown>
+                  <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                    Basic dropdown<span class="caret"></span></a>
+                  <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+                  </div>
+                </li>
+          
+              </ul>
+              <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <mdb-icon fab icon="twitter"></mdb-icon>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <mdb-icon fab icon="google-plus"></mdb-icon>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
+                    <div class="btn-group" mdbDropdown>
+                      <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-primary">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+         
+            
+          
+          </mdb-navbar> -->
+                
+                   
+                   <!-- <div class="navbar"style="font-family:Lucida Console" >
+                        <div>
+                                <a style=" font-size: xx-large ;color: black;">        E   X     A   M   E   N</a>   
+                        </div>
+                        
+                                 <a routerLink="login" style="text-align: center;font-family:Lucida Console ;color: black ;float:right"><h4>Log In</h4></a>
+                                 <ul class="nav nav-tabs">
+                                         <li><a style=" font-size: xx-large ;color: black;">        E   X     A   M   E   N</a>   </li>
+                                        <li><a routerLink="movies">Movies</a></li>
+                                        <li><a routerLink="books">Books</a></li>
+                                        <li><a routerLink="addBook">Add Book</a></li>
+                                 </ul>
+                        <a style="font-family:Lucida Console  ;color: black ;float:right"><h4>Sign Up</h4></a>
+                        <a style="font-family:Lucida Console  ;color: black ;float:right"><h4>Contact</h4></a>
+                      </div>
+                      
+                      <div>
+                        <router-outlet></router-outlet>
+                      </div> -->
+                      <!-- <nav class="navbar navbar-default" style="border:black">
+                                <div> -->
+                                  <!-- Brand and toggle get grouped for better mobile display -->
+                                  <!-- <div class="navbar-header">
+                                   
+                                    <a class="navbar-brand" style=" font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: xx-large ;color:blanchedalmond">        E   X     A   M   E   N</a>
+                                  </div>
+                               -->
+                                  <!-- Collect the nav links, forms, and other content for toggling -->
+                                  <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+                                    <!-- <ul class="nav navbar-nav">
+                                      <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                                      <li><a href="#">Link</a></li>
+                                      <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                          <li><a href="#">Action</a></li>
+                                          <li><a href="#">Another action</a></li>
+                                          <li><a href="#">Something else here</a></li>
+                                          <li role="separator" class="divider"></li>
+                                          <li><a href="#">Separated link</a></li>
+                                          <li role="separator" class="divider"></li>
+                                          <li><a href="#">One more separated link</a></li>
+                                        </ul>
+                                      </li>
+                                    </ul> -->
+                                    <!-- <form class="navbar-form navbar-left">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                      </div>
+                                      <button type="submit" class="btn btn-default">Submit</button>
+                                    </form> -->
+                                    <!-- <ul class="nav navbar-nav navbar-right">
+                                                <li><a routerLink="login" style="text-align: center;font-family:Lucida Console ;color: black ;float:right"><h4>Contact</h4></a></li>
+                                                <li><a routerLink="login" style="text-align: center;font-family:Lucida Console ;color: black ;float:right"><h4>SignUp</h4></a></li>
+                                      <li><a routerLink="login" style="text-align: center;font-family:Lucida Console ;color: black ;float:right"><h4>LogIn</h4></a></li>
+
+                                
+                                    </ul> -->
+                                  <!-- </div>< /.navbar-collapse
+								</div> /.container-fluid 
+							
+							  </nav> 
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							<footer class="site-footer">
+			<div class="container">
+			  <div class="row">
+				<div class="col-sm-12 col-md-6">
+				  <h6>About</h6>
+				  <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+				</div>
+	  
+				<div class="col-xs-6 col-md-3">
+				  <h6>Categories</h6>
+				  <ul class="footer-links">
+					<li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+					<li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+					<li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+					<li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+					<li><a href="http://scanfcode.com/category/android/">Android</a></li>
+					<li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+				  </ul>
+				</div>
+	  
+				<div class="col-xs-6 col-md-3">
+				  <h6>Quick Links</h6>
+				  <ul class="footer-links">
+					<li><a href="http://scanfcode.com/about/">About Us</a></li>
+					<li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+					<li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+					<li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+					<li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+				  </ul>
+				</div>
+			  </div>
+			  <hr>
+			</div>
+			<div class="container">
+			  <div class="row">
+				<div class="col-md-8 col-sm-6 col-xs-12">
+				  <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+			   <a href="#">Scanfcode</a>.
+				  </p>
+				</div>
+	  
+				<div class="col-md-4 col-sm-6 col-xs-12">
+				  <ul class="social-icons">
+					<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+					<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+				  </ul>
+				</div>
+			  </div>
+			</div>
+	  </footer>-->
+                              
+                                
+       

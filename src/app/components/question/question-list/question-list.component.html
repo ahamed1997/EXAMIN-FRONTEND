@@ -1,0 +1,52 @@
+<h5>Test Model</h5>
+<div>
+<select class="form-control" [(ngModel)]="TestModel" (change)="sendTestModel($event)">
+    <option value="Aptitude">Aptitude</option>
+    <option value="Technical">Technical</option>
+</select>
+</div>
+<br/>
+<table class="table table-hover">
+    <tr style="background-color:rgb(65, 71, 69)">
+        <th style="color:rgb(177, 177, 177);"> QUESTIONS</th>
+        <th style="color:rgb(179, 179, 179);">TYPE</th>
+        <th style="color:rgb(179, 179, 179);">ANSWER</th>
+        <th colspan="4" style="padding-left: 17%; color:rgb(179, 179, 179);">OPTIONS</th>
+        <th style="color:rgb(179, 179, 179);">MARK</th>
+        <th></th>
+
+    </tr>
+
+          <!-- <tr *ngFor="let ques of services.list" (click)="populateForm(ques)"> -->
+            <tr *ngFor="let data of dat" (click)="populateForm(data)">
+            <td width="700%">
+                {{data.Sno}}.{{data.Question}}
+            </td>
+            <td>
+                {{data.Testmodel}}
+            </td>
+            <td>
+                {{data.Answer}}
+            </td>
+            <td>
+                {{data.Option1}} 
+            </td>
+            <td>
+                {{data.Option2}} 
+            </td>
+            <td>
+                {{data.Option3}} 
+            </td>
+            <td>
+                {{data.Option4}} 
+            </td>
+            <td>
+                {{data.Mark}}
+            </td>
+            <td>
+                <button (click)="onDelete(data.Sno)" class="btn btn-sm btn-outline-danger">Delete</button>
+            </td>
+        </tr>
+    </table> 
+    
+   

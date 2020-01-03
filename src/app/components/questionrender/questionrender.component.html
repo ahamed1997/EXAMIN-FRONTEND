@@ -1,0 +1,110 @@
+<br/>
+<hr>
+<div style="position: relative;border: solid 5px ;">
+        <hr>
+        <label style="font-family:Arial, Helvetica, sans-serif; margin-left: 20px;"><i>Question No : {{test.Qno}}</i></label>
+        <div>
+        <br/>
+         <label style="margin-left: 20px;">{{test.Question}}</label> 
+        <br/>    
+        <hr>
+        <div style="margin-left: 20px;">
+                <input type="radio" name="1" id="1" class="with-gap" [(ngModel)]="flag" [value]="1"(click)="Onclick(test.Sno,test.Qno,test.Option1,1,test.Answer)">
+                <label for="1">{{test.Option1}}</label><p>&nbsp;</p> 
+                <input type="radio" name="2" id="2" class="with-gap" [(ngModel)]="flag" [value]="2"  (click)="Onclick(test.Sno,test.Qno,test.Option2,2,test.Answer)">
+                <label for="2">{{test.Option2}}</label><p>&nbsp;</p> 
+                <input type="radio" name="3" id="3" class="with-gap" [(ngModel)]="flag" [value]="3" (click)="Onclick(test.Sno,test.Qno,test.Option3,3,test.Answer)">
+                <label for="3">{{test.Option3}}</label><p>&nbsp;</p> 
+                <input type="radio" name="4" id="4" class="with-gap" [(ngModel)]="flag" [value]="4"  (click)="Onclick(test.Sno,test.Qno,test.Option4,4,test.Answer)">      
+                <label for="4">{{test.Option4}}</label><p>&nbsp;</p>
+        </div>
+   
+        </div>
+
+        
+        <br/>
+</div>
+<div  style="text-align: center;width: 100%;">
+    <button class="btn btn-info" (click)="FinishTest()"> Finish </button>
+</div>
+ <!-- <div *ngFor = " let option of test.Options">
+
+                <input type="radio" id="option" name="radioTest"   (click)="Onclick(test.Qno,option)">
+                <label for="option">{{option}}</label><p>&nbsp;</p>                
+</div>    -->
+     <!---- <li ng-repeat="option in test.Options" ng-click="test.makeSelection($parent.$index,$index,option)" 
+        ng-class="{'selected' : test.selections[$parent.$index] == $index}">{{ option }}</li> -->
+        <!-- <div class="row text-left options">
+                <div class="col-md-6" *ngFor = " let option of test.Options">
+                    <div class="option">
+                        <label class="" for="{{option.Id}}">
+                            <input id="{{option.Id}}" type="checkbox" ng-model="option.Selected" 
+                            (click)="Onclick(test.Qno,option)" ng-change="onSelect(test.Qno, option);" />
+                            {{option}}
+                        </label>
+                    </div>
+
+                    
+                </div> -->     
+                    <!-- <input type="radio" id="1" name="Option1" [(ngModel)]="flag" [value]="0" (click)="Onclick(test.Qno,test.Option1,value)">
+                      <label for="Option1">{{test.Option1}}</label><p>&nbsp;</p>
+                  
+                      <input type="radio" id="2" name="Option2"[(ngModel)]="flag" [value]="1" (click)="Onclick(test.Qno,test.Option2,value)" >
+                      <label for="Option2">{{test.Option2}}</label><p>&nbsp;</p>
+                  
+                      <input type="radio" id="3" name="Option3" [(ngModel)]="flag" [value]="3" (click)="Onclick(test.Qno,test.Option3,value)" >
+                      <label for="Option3">{{test.Option3}}</label> <p>&nbsp;</p>
+        
+                      <input type="radio" id="4" name="Option4" [(ngModel)]="flag" [value]="4" (click)="Onclick(test.Qno,test.Option4,value)">
+                      <label for="Option4">{{test.Option4}}</label> <p>&nbsp;</p>  -->
+                   
+<!-- <div *ngFor = " let option of test.Options">
+        <input type="radio" id="option" name="radioTest" ng-model='genderValue' ng-checked='genderValue === option'(click)="Onclick(test.Qno,option)">
+        <label for="option">{{option}}</label><p>&nbsp;</p>                
+</div>   -->
+ <!-- <select [(ngModel)]="selectedObj" (change)="updateArray($event)">
+            <option *ngFor="let obj of test.Options" [ngValue]="obj" [selected]="selectedObj">
+                {{obj}}
+            </option>
+</select>  -->     
+
+
+<!-- <label>{{test.Qno}}</label>&nbsp;&nbsp;
+<label>{{test.Question}}</label>  
+<mat-radio-group (change)="onChange($event)" name="Options">
+        <mat-radio-button value="Option1">{{test.Option1}}</mat-radio-button>
+        <mat-radio-button value="Option2">{{test.Option2}}</mat-radio-button>
+        <mat-radio-button value="Option3">{{test.Option3}}</mat-radio-button>
+        <mat-radio-button value="Option4">{{test.Option4}}</mat-radio-button>
+
+</mat-radio-group>  -->
+
+<!-- <select [(ngModel)]="selectedobj" (change)="updateArray($event)">
+
+    <option *ngFor="obj of test.Options" [ngValue]="obj">
+        {{obj.name}}
+    </option>
+
+
+<ng-container > 
+    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+        <mat-radio-button class="example-radio-button" *ngFor="let option of test.Options" (click)="Onclick(test.Qno,option)" [value]="option">
+        {option}}&nbsp;&nbsp;</mat-radio-button>
+            <br/>
+            <select [(ngModel)]="selectedObj" (change)="updateArray($event)">
+
+                <option *ngFor="obj of options" [ngValue]="obj">
+                    {{obj.name}}
+                </option>
+                </select>
+    </mat-radio-group>
+</ng-container>
+
+
+</select> -->
+<!-- <select [(ngModel)]="selectedObj" (change)="updateArray($event)">
+
+    <option *ngFor="obj of options" [ngValue]="obj">
+        {{obj.name}}
+    </option>
+    </select> -->

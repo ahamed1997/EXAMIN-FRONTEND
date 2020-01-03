@@ -1,0 +1,49 @@
+
+<div class="container">  
+    <div *ngFor="let user of userdata">
+            <div class="container">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>TestModel</th>
+                            <th>TestDate</th>
+                            <th>TestStatus</th>
+                            <th>Result</th>
+                            <th colspan="2">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> {{user.Username}}</td>
+                            <td> {{user.Testmodel}}</td>
+                            <td> {{user.Testdate | date: "MM/d/y"}} </td>
+                            <td> <label class="text-warning">{{user.Teststatus}}</label> </td>
+                            <td> {{user.Result}}</td>
+                            <td> <button class="btn btn-outline-success" id="TakeTest"
+                                    (click)="onclick(user.Testmodel,user.Testdate,user.Testid)">Take test</button>&nbsp;&nbsp;
+                             <button  class="btn btn-outline-danger" id="TestCancel"
+                                    (click)="TestCancel(user.Testid)">cancel</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>          
+           
+           
+
+    </div>
+    
+</div>        
+          
+<div *ngIf ="teststatus==='empty'">
+    <div class="text-center">    
+        <img src="/assets/images/noresultsfound1.png">                              
+        </div> 
+</div>
+
+    
+
+
+
+

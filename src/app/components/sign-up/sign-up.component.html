@@ -1,0 +1,174 @@
+<body>
+    <div class="main">   
+      <form class="form1"  [formGroup]="signupform"  autocomplete="off" (ngSubmit)="register()">
+        <p class="reg" align="center">SIGN UP</p>
+            <div style="color: rgb(192, 5, 5);" class="text-center"> 
+                {{errormessage}}
+                {{primaykeyerror}}
+            </div>
+        <input class="form-control" id="name" type="text"  placeholder="Name"
+                    align="center"
+                     type="text" [ngClass]="{'is-invalid':submitted && f.name.errors}"
+                     placeholder="Name" 
+                     maxlength="30"
+                     name="name"
+                     formControlName="name" required/>
+                     <!-- <div class="validation-error" *ngIf="Testmodel.invalid && Testmodel.touched">*</div> -->
+                      <div class="errors" *ngIf="name.errors.required && name.touched">
+                          <span *ngIf="submitted && f.name.errors">*</span>
+                             <span class="validation-error" *ngIf="f.name.errors.pattern">Enter a valid Name</span>
+                             <span class="validation-error" *ngIf="f.name.errors.maxlength">Name should be correct Format</span>
+                      </div> 
+<br><br>
+        <input class="email" type="text"
+                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            placeholder="Email ID"
+                            align="center" name="email"
+                            formControlName="email" required />
+                            <div class="errors" *ngIf="email.errors.required && email.touched" >
+                                    <span *ngIf="email.errors.pattern">Invalid Email Id</span>
+                                 </div>
+                                 <br><br>
+        <input class="mob" minlength="10"
+                                 maxlength="10"
+                                 pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"
+                                 type="tel" name="phone"
+                                 align="center"
+                                 placeholder="Mobile No"
+                                 formControlName="phone" required/>
+                                 <div class="errors" *ngIf="phone.errors.required && phone.touched" >
+                                         <span *ngIf="phone.errors.required"></span>
+                                      <span *ngIf="phone.errors.minlength">Enter a Valid Number</span>
+                                      <span *ngIf="phone.errors.pattern">Invalid Mobile No</span>
+                                     </div>
+                                     <br><br>
+        <input class="un" type="text" name="username"
+                                        placeholder="Username" 
+                                        align="center" 
+                                        maxlength="30"
+                                        formControlName="username" required />
+                                         <div class="errors" *ngIf="username.errors.required && username.touched" >
+                                                <span *ngIf="username.errors.maxlength">UserName a valid Username</span>
+                                               </div> 
+                                               <br><br>
+        <input class="pass" type="password" name="password"
+                                placeholder="Password" 
+                                align="center"
+                                maxlength="30"
+                                formControlName="password" required/>
+                                 <div class="errors" *ngIf="password.errors.required && password.touched">
+                                       </div> 
+                                       <br><br>
+            
+            <div class="button_cont"><button class="submit" 
+                 target="submit" rel="nofollow noopener">Sign Up</button>
+            </div>
+        <br/>
+        <div class="back_button"> 
+            <div class="button_cont"><a class="back" 
+                 target="reset" rel="nofollow noopener" (click)="Back()">Back</a>
+            </div>
+        </div>
+      </form>    
+    </div>
+  </body>
+
+
+                <!-- <form [formGroup]="angForm" (ngSubmit)="register()">
+                    <div>
+                     <label class="form-control">Name</label>
+                     <input class="form-control" 
+                     type="text"
+                     placeholder="Enter the Name" 
+                     pattern="[A-Za-z ]{1,32}"
+                     maxlength="30"
+                     formControlName="name" required />
+                      <span *ngIf="name.errors && name.touched" class="alert alert-danger">
+                             <span *ngIf="name.errors.required">*</span>
+                             <span *ngIf="name.errors.pattern">Enter a vaid Name</span>
+                             <span *ngIf="name.errors.maxlength">Name should be correct Format</span>
+                            </span> 
+                        </div>
+
+                        <div>
+                            <label class="form-control">Email</label>
+                            <input class="form-control"  type="text"
+                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            placeholder="Enter the Email"
+                            formControlName="email" required />
+                            <span *ngIf="email.errors && email.touched" class="alert alert-danger">
+                                    <span *ngIf="email.errors.required">*</span>
+                                    <span *ngIf="email.errors.pattern">Email should be valid Format</span>
+                                 </span>
+                                </div>
+                        
+                                <div>
+                                 <label class="form-control">Mobile Number</label>
+                                 <input class="form-control" 
+                                 minlength="10"
+                                 maxlength="10"
+                                 pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"
+                                 type="tel" 
+                                 placeholder="Enter the Mobile Number"
+                                 formControlName="phone" required/>
+                                 <span *ngIf="phone.errors && phone.touched" class="alert alert-danger">
+                                         <span *ngIf="phone.errors.required">*</span>
+                                      <span *ngIf="phone.errors.minlength"> Number cannot exceeds 10</span>
+                                      <span *ngIf="phone.errors.maxlength"> Number cannot exceeds 10</span>
+                                      <span *ngIf="phone.errors.pattern"> Number should be correct Format</span>
+                                     </span>
+                                    </div>
+
+                                    <div>
+                                        <label class="form-control">Username</label>
+                                        <input class="form-control" 
+                                        type="text"
+                                        placeholder="Enter the Username" 
+                                        
+                                        maxlength="30"
+                                        formControlName="username" required />
+                                         <span *ngIf="username.errors && username.touched" class="alert alert-danger">
+                                                <span *ngIf="username.errors.required">*</span>
+                                                <span *ngIf="username.errors.pattern">First Letter Should be in capital</span>
+                                                <span *ngIf="username.errors.maxlength">UserName should be correct Format</span>
+                                               </span> 
+                                           </div>
+
+                             <div>
+                                <label class="form-control">Password</label>
+                                <input class="form-control" 
+                                type="password"
+                                placeholder="Enter the Password" 
+                                
+                                maxlength="30"
+                                formControlName="password"  required/>
+                                 <span *ngIf="password.errors && password.touched" class="alert alert-danger">
+                                        <span *ngIf="password.errors.required">Password cannot be empty</span>
+                                    
+                                        <span *ngIf="password.errors.maxlength">Password should be correct Format</span>
+                                       </span> 
+                                   </div>
+                                   {{primaykeyerror}}
+                                   <div style="color: red;">
+                                    {{errormessage}}
+                                   </div>
+                                   <button class="btn btn-primary">
+                                       Submit
+                                   </button>
+                                   <button class="submit"  (click)="Back()" style="position: relative;" >
+                                    Back
+                                 </button>
+</form>
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div> -->
+
+    

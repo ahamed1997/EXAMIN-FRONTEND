@@ -1,0 +1,90 @@
+<!-- <div *ngFor="let admins of admin">
+        Name {{admins.Name}}
+        <br/>
+        Email Id: {{admins.Email}}
+        <br/>
+        Phone No: {{admins.Phone}}
+        <br/>
+        User Name: {{admins.Username}}
+        <br/>
+        <br/>
+</div> -->
+
+<!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row">
+	<div class="col-lg-12">
+		<div class="main-box clearfix">
+			<div class="table-responsive">
+				<table class="table user-list">
+					<thead>
+						<tr>
+							<th class="text-center"><span>Name</span></th>
+							<th class="text-center"><span>Email Id</span></th>
+							<th class="text-center"><span>Mobile No</span></th>
+							<th class="text-center"><span>User Name</span></th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody *ngFor="let admins of admin">
+						<tr>
+							<td>
+								<strong>{{admins.Name}}</strong>
+								<span class="user-subhead">{{admins.Email}}</span> 
+							</td>
+							<td>
+                                {{admins.Email}}
+							</td>
+							<td class="text-center">
+								<span class="label label-default">{{admins.Phone}}</span>
+							</td>
+							<td>
+								<a>{{admins.Username}}</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<ul class="pagination pull-right">
+				<li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+			</ul> 
+		</div>
+	</div>
+</div>
+</div> -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row bootstrap snippets"> 
+    <div class="col-md-9 col-sm-7"> 
+        <h2 class="text-center">Users</h2> 
+    </div>  
+</div>
+
+<div class="member-entry" *ngFor="let admins of admin"> 
+    <div class="member-details"> 
+        <h4><a>{{admins.Name}}</a> </h4> 
+        <div class="row info-list">  
+            <div class="col-sm-4"> 
+                <i class="fa fa-twitter"></i> 
+                <a>@{{admins.Username}}</a> 
+            </div> 
+            <div class="col-sm-4"> 
+                <i class="fa fa-envelope"></i> 
+                <a>{{admins.Email}}</a> 
+            </div> 
+            <div class="clear"></div>  
+            <div class="col-sm-4"> 
+                <i class="fa fa-phone"></i> 
+                <a>{{admins.Phone}}</a> 
+            </div> 
+        </div> 
+    </div> 
+    <br>
+    <br>
+</div>

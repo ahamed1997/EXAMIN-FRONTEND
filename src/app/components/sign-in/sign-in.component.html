@@ -1,0 +1,163 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col s10 offset-s12">
+            <div class="card">
+                <div *ngIf="isLogInError" class="red-text center error-message" style="color: red;">
+                    <i class="material-icons">
+                        error
+                    </i>
+                    Incorrect username or password
+                </div>
+                <form [formGroup]="angForm" (ngSubmit)="login()">
+                    
+                    <div>
+                        <label class="form-control">Username</label>
+                        <input class="form-control" 
+                        type="text"
+                        placeholder="Enter the Username" 
+                 
+                        formControlName="username" required />
+                         <span *ngIf="username.errors && username.touched" class="alert alert-danger">
+                                <span *ngIf="username.errors.required">*</span>
+                                
+                               </span> 
+                           </div>
+
+             <div>
+                <label class="form-control">Password</label>
+                <input class="form-control" 
+                type="password"
+                placeholder="Enter the Password" 
+                
+    
+                formControlName="password"  required/>
+                 <span *ngIf="password.errors && password.touched" class="alert alert-danger">
+                        <span *ngIf="password.errors.required">Password cannot be empty</span>
+                    
+                       </span> 
+                   </div>
+                   <div style="color: red;">
+                    {{errormessage}}
+                   </div>
+                   <button class="btn btn-primary">
+                       Submit
+                   </button>
+</form>
+
+            </div>
+            </div>
+    </div>
+</div> -->
+
+
+<!-- <head>
+    <title>Sign in</title>
+  </head>
+  <body>
+    <div class="main">
+        <div  align="center">
+            {{errormessage}}
+           </div>
+        <form class="form1">
+        <form [formGroup]="angForm" (ngSubmit)="login()">
+        <div *ngIf="isLogInError" style="color: red;">
+            <i class="material-icons">
+                error
+            </i>
+            Incorrect username or password
+        </div>
+        <p class="sign" align="center">Sign in</p>
+        <input class="form-control" type="text" align="center"  placeholder="Enter the Username" formControlName="username" required />
+        <span *ngIf="username.errors && username.touched" >
+            <span *ngIf="username.errors.required">*</span>            
+           </span> 
+           <input class="form-control" 
+                type="password"
+                placeholder="Enter the Password" 
+                
+    
+                formControlName="password" align="center"  required/>
+                 <span *ngIf="password.errors && password.touched">
+                        <span *ngIf="password.errors.required">*</span>
+                    
+                       </span> 
+                      
+                        <div class="submit" align="center">
+                            Submit
+                        </div> 
+                        <button class="submit" type="submit">Submit</button>
+                
+                           <div class="back"  (click)="Back()" style="position: relative;" >
+                           Back
+                           </div>
+                     <br>
+                      <p class="forgot" align="center"><a href="forgotpassword">Forgot Password?</a></p>
+      
+      </form>  
+        </form>  
+    </div>
+  </body> -->
+
+
+  <head>
+    <title>Sign in</title>
+  </head>
+  <body>
+    <div class="main">
+        <form class="form1" [formGroup]="angForm" (ngSubmit)="login()">
+        <!-- <div *ngIf="isLogInError" style="color: red;">
+            <i class="material-icons">
+                error
+            </i>
+            Incorrect username or password
+        </div> -->
+    <p class="sign" align="center">Sign in</p>
+    <div class="errormsg"  align="center" style="color:red;">
+        {{errormessage}}
+       </div>
+    <div>
+        <input class="un" name="username"
+            type="text" align="center"
+            placeholder="Enter the Username" 
+            formControlName="username" required>
+            <span *ngIf="username.errors">
+                <span id="error" *ngIf="username.errors.required && username.touched"></span>             
+            </span>
+            </div>
+        <br>
+        <br>
+        <div>
+           <input class="pass" 
+                type="password" name="password"
+                placeholder="Enter the Password" 
+                formControlName="password" align="center"  required>
+                 <!-- <div id="error" *ngIf="password.errors && password.touched">
+                        <div *ngIf="password.errors.required">*</div> -->
+                    <span *ngIf="password.errors">
+                        <span id="error" *ngIf="password.errors.required && password.touched"></span>
+                    </span> 
+       </div>         
+                        <!-- <div class="submit" align="center">
+                            Submit
+                        </div>  -->
+                    <div class="buttons" align="center">
+                        <button class="submit" type="submit">Submit</button>
+                
+                           <span class="back" (click)="Back()">
+                           Back
+                           </span>
+                    </div>
+                     <br>
+                      <p class="forgot" align="center"><a href="forgotpassword">Forgot Password?</a></p> 
+        </form>  
+    </div>
+  </body>
+
+
+  <!-- <input name="email" class="email" type="text" align="center"                          
+  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+formControlName="email" placeholder="Mail-Id" required>
+   <span class="errormsg" style="color: red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       {{errormessage}} </span>   
+   <span *ngIf="email.errors.pattern"></span> 
+   <span style="color: red;" *ngIf="email.errors.required && email.touched"></span>    -->

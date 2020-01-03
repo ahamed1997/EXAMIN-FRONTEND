@@ -1,0 +1,20 @@
+export class Firstpage{
+    Id:string;
+    Testid:string;
+    Username:string;
+    Testmodel:string;
+    Teststatus:string;
+    Testdate:string;
+    Paymentmode:string;
+    Result:string;
+    constructor(id?,Testid?,username?,testmodel?,teststatus?,testdate?,result?,paymen?){
+        this.Id=id;
+        this.Testid=Testid;
+        this.Username=username;
+        this.Testmodel=testmodel;
+        this.Teststatus=teststatus;
+        this.Testdate=testdate;
+        this.Result=result;
+        this.Paymentmode=paymen;
+    }
+}

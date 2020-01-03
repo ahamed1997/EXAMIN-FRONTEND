@@ -1,0 +1,42 @@
+.home-design-info figure img, .home-dev-info figure img{
+    width: 230px;
+    height:230px;
+    border-radius:50px;
+    border:gray;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+#principal-content {
+    background: none repeat scroll 0 0 #fff;
+    padding-top: 4%;
+    position: relative;
+    z-index: 980;
+}
+
+#principal-content #develop {
+    margin: 1em 0;
+    text-align: center;
+}  
+#details{
+    padding-top:6%;
+    padding-left:12%;
+}  
+.row #design{
+    padding-top:3%;
+    padding-left:20%;
+}
+h4{
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    color:rgb(104, 104, 104);
+    text-align: center;
+    
+
+}
+
+
+
+

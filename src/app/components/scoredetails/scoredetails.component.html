@@ -1,0 +1,32 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row bootstrap snippets"> 
+    <div class="col-md-9 col-sm-7"> 
+        <h2 class="text-center">Score Card</h2> 
+    </div>  
+</div>
+
+<div class="member-entry" *ngFor="let admins of admin"> 
+    <div class="member-details"> 
+        <h4><a>Username: {{admins.Username}}</a> </h4> 
+        <div class="row info-list">   
+            <div class="col-sm-6"> 
+                <i class="fa fa-envelope"></i> 
+                <a>Testid: {{admins.Testid}}</a> 
+            </div> 
+            <div class="clear"></div>  
+            <div class="col-sm-6"> 
+                <i class="fa fa-phone"></i> 
+                <a>Testmodel: {{admins.Testmodel}}</a> 
+            </div>
+            <div class="col-sm-6"> 
+                    <i class="fa fa-pencil"></i> 
+                    <a>Teststatus: {{admins.Teststatus}}</a> 
+            </div>
+            <div class="col-sm-6"> 
+                    <i class="fa fa-pencil-square-o"></i> 
+                    <a>Score: {{admins.Result}}</a> 
+            </div> 
+        </div> 
+    </div> 
+</div>

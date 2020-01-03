@@ -1,0 +1,236 @@
+body{
+   
+     
+    font-family: 'Ubuntu', sans-serif;
+    background: url("https://img.freepik.com/free-photo/cement-wall-floor-copy-space_53876-30237.jpg?size=626&ext=jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.errormsg{
+position: absolute;
+left: 140px;
+top:-10px;
+}
+
+.main {
+    background-color: transparent;
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    border-radius: 2.5em;
+    margin-left: 480px; 
+    margin-top: 18%;
+}
+
+.sign {
+    padding-top: 30px;
+     color: #8C55AA;
+    color: rgb(36, 34, 33); 
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow:1px 1px 2px rgb(146, 123, 127);
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.un{
+width: 76%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.274);
+border: none;
+border-radius: 20px;
+outline: none;
+padding: 8px;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 0px;
+margin-left: 44px;
+margin-top: 30px;
+text-align: center;
+font-family: 'Ubuntu', sans-serif;
+}
+
+.form1{
+    padding-top: 10px;
+    margin-top: -27%;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.37);
+    border-radius: 5%;
+    width: 400px;
+    height: 400px;
+
+}
+
+.pass {
+width: 76%;
+color: rgb(38, 50, 56);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgba(136, 126, 126, 0.274);
+padding: 8px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 40px;
+margin-left: 44px;
+text-align: center;
+margin-bottom: 37px;
+/* margin-top: 10px; */
+font-family: 'Ubuntu', sans-serif;
+}
+
+.un:focus, .pass:focus {
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.18) !important; 
+
+}
+.submit:focus{
+    border: 2px solid rgba(76, 83, 85, 0.767) !important;
+}
+
+/* .submit {
+    cursor: pointer;
+    position: absolute;
+    border-radius: 5em;
+    color: rgb(219, 222, 223);
+    background: linear-gradient(to right, rgb(81, 83, 83), rgb(167, 178, 180));
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 32%;
+    margin-top: 25%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(1, 60, 255, 0.04);
+    
+} */
+
+/* .back {
+
+    cursor: pointer;
+    position: relative;
+    border-radius: 5em;
+    color: rgb(219, 222, 223);
+    background: linear-gradient(to right, rgb(81, 83, 83), rgb(167, 178, 180));
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 36%;
+    margin-top: 0%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(1, 60, 255, 0.04);
+    
+} */
+.forgot {
+    color: rgb(61, 57, 49);
+    position: absolute;
+    padding-top: 10px;
+    left:140px;
+    top:240px;
+}
+span{
+    padding-top: 20%;
+    cursor: pointer;
+    border-radius: 5em;
+    box-shadow: 0 0 20px 1px rgba(1, 60, 255, 0.04);
+}
+
+a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+    }
+} 
+/* --------------------------- */
+.submit{
+    color:rgb(223, 223, 223) !important;
+    text-decoration: none;
+    background: linear-gradient(to left, rgb(98, 100, 100), rgb(148, 152, 153));
+    /* // background: linear-gradient(to right, rgb(93, 95, 95), rgb(162, 164, 165)); */
+    cursor: pointer;
+    border-radius: 5em;
+    border: 0;
+    position: absolute;
+    padding-left: 35px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    /* margin-left: 16%; */
+    font-size: 15px;
+    /* left:10px;
+    margin-top: 10px; */
+    /* // border: 2px solid darkgray !important; */
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    border-radius:20px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    }
+    .back{
+    color:rgb(223, 223, 223) !important;
+    text-decoration: none;
+    background: linear-gradient(to left, rgb(98, 100, 100), rgb(148, 152, 153));
+    /* // background: linear-gradient(to right, rgb(93, 95, 95), rgb(162, 164, 165)); */
+    cursor: pointer;
+    border-radius: 5em;
+    border: 0;
+    position: absolute;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    /* margin-left: 34% !important; */
+    font-size: 15px;
+    /* // border: 2px solid darkgray !important; */
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    border-radius:20px;
+    /* top:38%; */
+    left:150px; 
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    }
+    .back:hover,.submit:hover{
+        color: rgb(173, 173, 173) !important;
+        background: rgb(86, 87, 88);
+        border-color: darkgray !important;
+        transition: all 0.4s ease 0s;
+        }
+    .buttons{
+        position: fixed;
+        margin-left:5%;
+    }
+/* 
+        div.validation-error{
+            width:100%;
+            margin-top:.25rem;
+            font-size:80%;
+            margin-left: 44px;
+
+            color:#dc3545;
+        } */
+        input.ng-touched.ng-invalid{
+            border-color:#dc3545
+        }
+        input.ng-dirty.ng-invalid{
+            border-color:#dc3545;
+        }

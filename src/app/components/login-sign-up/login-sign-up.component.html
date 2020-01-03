@@ -1,0 +1,257 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="hero-bkg-animated">
+    <div class="container">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          
+            <div *ngIf="paymentmode!='2'">
+                <div class="card border-primary mb-3" style="max-width: 35rem;">
+                    <form  #form="ngForm" [formGroup]="myForm" (ngSubmit)="showDetails()">
+                        <div class="card-body text-primary">
+                            <label>Name</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input class="form-control" type="text" placeholder="Enter the Name" 
+                                    maxlength="60" formControlName="name" [ngClass]="{'is-invalid':submitted && f.name.errors}"  />                                
+                            </div>
+                            <div>
+                                <span *ngIf="submitted && f.name.errors">
+                                    <span class="validation-error"  style="color: red;" *ngIf="f.name.errors.required">*</span>
+                                    <span class="validation-error"  *ngIf="f.name.errors.pattern" style="color: red;">Please Enter a valid Name</span>
+                                    <span class="validation-error"  *ngIf="f.name.errors.maxlength">Name should be correct Format</span >
+                                </span>
+                            </div>
+                            <label>Email</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input class="form-control" type="text" 
+                                    placeholder="Enter the Email" formControlName="email" [ngClass]="{'is-invalid':submitted && f.email.errors}" />
+                               
+                            </div>
+                            <span *ngIf="submitted && f.email.errors" >
+                                <span *ngIf="f.email.errors.required" style="color: red;">*</span>
+                                <span *ngIf="f.email.errors.pattern" style="color: red;">Please Enter a Valid Email</span>
+                            </span>
+                            <br />
+                            <label>Mobile Number</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                                <input class="form-control" minlength="10" maxlength="10"
+                                    type="tel"
+                                    placeholder="Enter the Mobile Number" formControlName="mobile" [ngClass]="{'is-invalid':submitted && f.mobile.errors}"/>
+                               
+                            </div>
+                            <span *ngIf="submitted && f.mobile.errors " >
+                                <span *ngIf="f.mobile.errors.required" style="color: red;">*</span>
+                                <span *ngIf="f.mobile.errors.minlength"></span>
+                                <span *ngIf="f.mobile.errors.maxlength">*</span>
+                                <span *ngIf="f.mobile.errors.pattern" style="color: red;"> Enter a Valid Number</span>
+                            </span>
+                            <br />
+                            <label>Aadhar CardNumber</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
+                                <input class="form-control" minlength="16" maxlength="16"   
+                                    
+                                    type="tel" placeholder="Enter the Aadharcard Number"
+                                    formControlName="aadharcardNumber" [ngClass]="{'is-invalid':submitted && f.aadharcardNumber.errors}" />
+                                
+                            </div>
+                            <span *ngIf=" submitted && f.aadharcardNumber.errors">
+                             <span *ngIf="f.aadharcardNumber.errors.required" style="color: red;">*</span>
+                             <span *ngIf="f.aadharcardNumber.errors.minlength" style="color: red;">*</span>
+                             
+                             <span *ngIf="f.aadharcardNumber.errors.pattern" style="color: red;"> Enter a Valid Aadharcard Number</span>
+                         </span>
+                            <br />
+                            <label>TestModel</label>
+                            <div class="input-group">
+                                <select class="form-control" placeholder="Select the TestModel" formControlName="testModel" required [ngClass]="{'is-invalid':submitted && f.testModel.errors}">
+                                    <option value="Aptitude">Aptitude</option>
+                                    <option value="Technical">Technical</option>
+                                </select>
+                            </div>
+                   <div *ngIf ="submitted && f.testModel.errors" class="invalid-feedback">
+                        <div *ngIf="f.testModel.errors.required" style="color: red;">
+                            *
+                        </div>
+                   </div>
+                            <br />
+                            <label>Select Test Date</label>                            
+                              
+                              
+                              <input type="date" class="form-control" formControlName="date" id="txtDate" required/>
+                              <span *ngIf="submitted && f.date.errors" >
+                                <span *ngIf="f.date.errors.required" style="color: red;">*</span> 
+                            </span>
+                            <div class="text-center">
+                              {{result}}
+                            </div>
+                            <div class="text-center"><br/>
+                              
+                           
+                                <button type="submit"  class="btn btn-outline-primary">Proceed Payment</button>
+                                
+                                
+                            </div>
+                            <div></div>
+                            <div class="text-center">
+      
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+
+     
+      <div>
+      <div  class="container" >      
+        <div class="col-md-4">
+        </div>
+          <div class="col-md-4">           
+            <div  *ngIf="paymentmode===2">
+           
+                <div>
+
+                    <div class="text-center" style="border: solid 3px ; max-width: 35rem;">
+                        <h4 style="background-color: red; color: whitesmoke; width: 100%;" class="text-center"><b>YOUR DETAILS</b></h4>
+                        <br>
+                        <div >
+                            <label style="color: indigo;">NAME : &nbsp;&nbsp;&nbsp;&nbsp;<i>{{exampaymentRegisters.name}}</i></label>
+                            <br>
+                            <label style="color: indigo;">TestModel : &nbsp;&nbsp;&nbsp;&nbsp;<i>{{exampaymentRegisters.TestModel}}</i></label>
+                            <br>
+                            <label style="color: indigo;">Email: &nbsp;&nbsp;&nbsp;&nbsp;<i>{{exampaymentRegisters.email}}</i></label>
+                            <br>
+                            <label style="color: indigo;">Mobile: &nbsp;&nbsp;&nbsp;&nbsp;<i>{{exampaymentRegisters.mobile}}</i></label>
+                            <br>
+                            <label style="color: indigo;">Test Date: &nbsp;&nbsp;&nbsp;&nbsp;<i>{{exampaymentRegisters.Testdate}}</i></label>
+                            <br>
+                          
+                            <h4 style="background-color: red; color: whitesmoke; width: 100%;" class="text-center"><b>PAYMENT DETAILS</b></h4>
+
+                            <br>
+                            <label style="color: indigo;">Amount to be Paid : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i> Rs.950</i></label>
+                            <br>
+                            <label style="color: indigo;">(+GST):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i> Rs.59</i></label>
+                            <br>              
+                            <label style="color: indigo;">Total Amount: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i> RS.1009.</i></label>
+                        </div>
+                        <div class="text-center">
+            
+                          <label> To Make Payment Select the Payment Mode</label>
+                            <div >
+                                <button class="btn btn-outline-danger"  (click)="back()">Back</button> <a>&nbsp;</a> <a>&nbsp;</a>
+                              <button  class="btn btn-outline-danger" (click)="clickcredit()">Credit Card</button>
+                              <a>&nbsp;</a> <a>&nbsp;</a>
+                              <button  class="btn btn-outline-warning" (click)=clickDebit()>Debit Card</button>                            
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+    
+                        
+    <div *ngIf ="dummy===3">    
+    
+        <h4  >
+            <b>Enter the {{paymenttype}} Details</b>
+         </h4>
+          <form [formGroup]="paymentForm" (ngSubmit)="creditpayment()">
+            
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input class="form-control" type="text"  maxlength="20"
+                      placeholder="Enter the CardHolder Name" formControlName="cardHolderName" [ngClass]="{'is-invalid':submitPayment && c.cardHolderName.errors}"/>
+                  <span *ngIf="submitPayment && c.cardHolderName.errors " >
+                      <span *ngIf="c.cardHolderName.errors.required">*</span>
+                      <span *ngIf="c.cardHolderName.errors.pattern">cardHolderName should be correct</span>
+                      <span *ngIf="c.cardHolderName.errors.maxlength">cardHolderName should be correct Format</span>
+                  </span>
+              </div>
+              <br/>
+    
+         
+              <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
+                  <input class="form-control" minlength="16" maxlength="16"
+                      
+                      type="tel" placeholder="Enter the CardNumber" formControlName="cardnumber" [ngClass]="{'is-invalid':submitPayment && c.cardnumber.errors}"/>
+                  <span *ngIf="submitPayment && c.cardnumber.errors " >
+                      <span *ngIf="c.cardnumber.errors.required">*</span>
+                      <span *ngIf="c.cardnumber.errors.minlength">card Number cannot exceeds 16 digits</span>
+                      <span *ngIf="c.cardnumber.errors.maxlength"> card Number cannot exceeds 16 digits</span>
+                      <span *ngIf="c.cardnumber.errors.pattern"> card Number should be correct Format</span>
+                  </span>
+              </div>
+              <br/>
+              
+              
+              
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-date"></i></span>
+                  <input class="form-control" type="text" formControlName="expiration" maxlength="2" placeholder="EXP-MM"
+                      required  [ngClass]="{'is-invalid':submitPayment && c.expiration.errors}"/>
+                      <span *ngIf="submitPayment && c.expiration.errors" >
+                        <span *ngIf="c.expiration.errors.required">*</span>
+                        <span *ngIf="c.expiration.errors.pattern">Expiration should be correct Format</span>
+                    </span>
+    
+                  <input class="form-control" type="text" formControlName="expirations" maxlength="2" placeholder="EXP-YY"
+                      
+                       [ngClass]="{'is-invalid':submitPayment && c.expirations.errors}"/>
+                       <span *ngIf="submitPayment && c.expirations.errors" >
+                        <span *ngIf="c.expirations.errors.required">*</span>
+                        <span *ngIf="c.expirations.errors.pattern">Invalid</span>
+                    </span>
+                  
+              </div>
+              <br/>
+    
+
+              <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
+                  <input class="form-control" minlength="3" maxlength="3"  type="password"
+                      placeholder="Enter the cvv Number" formControlName="cvv" [ngClass]="{'is-invalid':submitted && c.cvv.errors}"/>
+                  <span *ngIf=" submitPayment && c.cvv.errors " >
+                      <span *ngIf="c.cvv.errors.required">*</span>
+                  
+                      <span *ngIf="c.cvv.errors.pattern"> cvv Number should be correct Format</span>
+                  </span>
+    
+                  <br />
+              </div>
+              <br/>
+              <div>
+                {{res}}
+              </div>
+              <div class="text-center">
+                  <div>
+                    <button class="btn btn-outline-primary" (click)="BackAfterPayment()" >Back</button>
+                   <a>&nbsp;&nbsp;</a>
+                    <button  type="submit" class="btn btn-outline-primary" >Confirm Payment</button>
+                     <br>
+                  </div>
+                
+            </div>
+            
+          </form>
+    
+    
+    
+    
+    
+    </div>
+                    </div>
+                    
+                          
+              </div>
+            </div>
+        </div>
+      </div> 
+    </div>       
+</div>

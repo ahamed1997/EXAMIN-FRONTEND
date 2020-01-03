@@ -1,0 +1,86 @@
+<div class="center">
+    <h1>EXAMIN - ONLINE ASSESSMENT</h1> &nbsp; &nbsp; &nbsp;
+
+    <div>
+         &nbsp; <label>
+              <h5><b>Module : {{testtype}}</b></h5>
+         </label>
+         <div style="background-color: chartreuse; float: center; text-align: center;">
+
+              <label style="left: 30px; right: 40px;"><a class="fa fa-hourglass-end"></a> Test will end in <span
+                        id="time" style="font-size:36px"></span> minutes!</label>
+         </div>
+    </div>
+</div>
+<div class="center">
+    <br /><br />
+    <table style="border: solid 5px; width: 80%; text-align: center;">
+         <td>
+              <div class="text-center" style="background-color:grey; height: 65px; padding: 10px;">
+                   <div *ngFor="let tests of test" style=" float: left; text-align: center; ">
+
+                        <button class="btn btn-info" id="tests.Qno"
+                             (click)="OnClick(testtype,tests.Sno,tests.Qno)">{{tests.Qno}}</button> &nbsp;
+                   </div>
+                   <br />
+              </div>
+              {{qno}}
+              <div style="position: relative; ">
+                   <router-outlet></router-outlet>
+              </div>
+         </td>
+    </table>
+</div>
+
+
+
+
+<!-- <div>   
+    
+    
+                   <div>
+                        <label>{{testmodule.Qno}}</label>&nbsp;
+                        <label>{{testmodule.Question}}</label>                                  
+                            
+                        <br/>          
+                        <input type="radio" id="Option1" name="radioTest" value="Option1"  (click)="Onclick(testmodule.Qno,testmodule.Option1)">
+                       <label for="Option1">{{testmodule.Option1}}</label><p>&nbsp;</p>
+                   
+                       <input type="radio" id="Option2" name="radioTest" value="Option2" (click)="Onclick(testmodule.Qno,testmodule.Option2)" >
+                       <label for="Option2">{{testmodule.Option2}}</label><p>&nbsp;</p>
+                   
+                       <input type="radio" id="Option3" name="radioTest" value="Option3" (click)="Onclick(testmodule.Qno,testmodule.Option3)" >
+                       <label for="Option3">{{testmodule.Option3}}</label> <p>&nbsp;</p>
+         
+                       <input type="radio" id="Option4" name="radioTest" value="Option4" (click)="Onclick(testmodule.Qno,testmodule.Option4)">
+                       <label for="Option4">{{testmodule.Option4}}</label> <p>&nbsp;</p> 
+                             
+                   </div>
+         
+         
+</div> -->
+
+
+
+<!-- 
+                        <input type="radio" name="Options" id="Option1" value="Option1" [checked]="isLast" (change)="onSelectionChange(testmodule.Option1, param.paramId, coworker.empId)" />
+                        <label for="Option1" (click)="Onclick(testmodule.Qno,testmodule.Option1)">{{testmodule.Option1}}</label> <p>&nbsp;</p>
+                        <input type="radio" name="Options" id="Option2" value="Option2" [checked]="isLast" (change)="onSelectionChange(testmodule.Option2, param.paramId, coworker.empId)" />
+                        <label for="Option2" (click)="Onclick(testmodule.Qno,testmodule.Option2)" >{{testmodule.Option2}}</label><p>&nbsp;</p>
+                        <input type="radio" name="Options" id="Option3" value="Option3" [checked]="isLast" (change)="onSelectionChange(testmodule.Option3, param.paramId, coworker.empId)"  />
+                        <label for="Option3" (click)="Onclick(testmodule.Qno,testmodule.Option3)" >{{testmodule.Option3}}</label><p>&nbsp;</p> 
+                        <input type="radio" name="Options" id="Option4" value="Option4" [checked]="isLast" (change)="onSelectionChange(testmodule.Option4, param.paramId, coworker.empId)" />
+                        <label for="Option4" (click)="Onclick(testmodule.Qno,testmodule.Option4)" >{{testmodule.Option4}}</label><p>&nbsp;</p> -->
+<!-- <input type="radio" id="Option1" name="radioTest" value="Option1" (click)="Onclick(qs.Qno,qs.Option1)">
+                       <label for="Option1">{{testmodule.Option1}}</label><p>&nbsp;</p>
+                   
+                       <input type="radio" id="Option2" name="radioTest" value="Option2" (click)="Onclick(qs.Qno,qs.Option2)" >
+                       <label for="Option2">{{testmodule.Option2}}</label><p>&nbsp;</p>
+                   
+                       <input type="radio" id="Option3" name="radioTest" value="Option3" (click)="Onclick(qs.Qno,qs.Option3)" >
+                       <label for="Option3">{{testmodule.Option3}}</label> <p>&nbsp;</p>
+         
+                       <input type="radio" id="Option4" name="radioTest" value="Option4" (click)="Onclick(qs.Qno,qs.Option4)">
+                       <label for="Option4">{{testmodule.Option4}}</label> <p>&nbsp;</p> 
+             </div>
+ </div>-->

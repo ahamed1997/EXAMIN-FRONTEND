@@ -1,0 +1,13 @@
+table{
+    width:1000px;
+    margin-left: 0%;
+    
+}  
+table tr:hover{
+    cursor: pointer;
+    background-color:rgb(241, 241, 241);
+}
+table{
+    background:white;
+    border: 1px solid lightgray;
+}

@@ -1,0 +1,40 @@
+<div class="background"> 
+</div>
+<div class="backgroundBottom">   
+  </div>
+<br><br><br>
+
+<div class="homePageButtons"> 
+  <!-- <button class="btn btn-primary" (click)="adminClick()">Admins</button>
+
+<br>
+  <button class="btn btn-primary" (click)="userClick()">Users</button>
+<br>
+  <button class="btn btn-primary" (click)="paymentClick()">Payed User</button>
+<br>
+
+  <button class="btn btn-primary" (click)="scoreClick()">Candidate Results</button> -->
+
+  <div class="button_cont" align="center" (click)="adminClick()"><a class="userdetails" 
+
+       rel="nofollow noopener">Admins</a>
+  </div>
+  <br>
+  <div class="button_cont" align="center" (click)="userClick()"><a class="exam" 
+        rel="nofollow noopener">Users Details</a>
+  </div>
+  <br>
+  <div class="button_cont" align="center" (click)="paymentClick()"><a class="examreg" 
+        rel="nofollow noopener">User Payments</a>
+  </div>
+  <br>
+  <div class="button_cont" align="center" (click)="scoreClick()"><a class="results" 
+       rel="nofollow noopener">User Scores</a>
+  </div>
+  <div>
+       
+  </div>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
